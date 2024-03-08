@@ -8,7 +8,7 @@ BASE = 'data/'
 def check_json(file : str):
   if not os.path.isfile(BASE+file): #Checks if file exists
     with open(BASE+file, 'w') as create:
-      json.dump({}, create, indendt = 4) #Creates file
+      json.dump({}, create, indent = 4) #Creates file
 
 #Read json file and converts it into a python variable
 #recive: Json file name

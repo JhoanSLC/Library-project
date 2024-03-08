@@ -1,12 +1,12 @@
 import ui.menus_options as menu
-
+import modules.books as book
 def main_menu():
     isapprunning = True
     while isapprunning:
         op = menu.main_menu_options()
         #Add book
         if op == '1':
-          pass
+          book.add_book()
         #See books list
         if op == '2':
           pass

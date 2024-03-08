@@ -15,5 +15,5 @@ def pause():
   if sys.platform == 'windows': #if operative system is windows
     os.system('pause')
   elif sys.platform == 'linux': #If operative system is linux
-    os.system('read -p "Press any key to continue..."')
+    input('Press any key to continue . . .')
 
