@@ -67,7 +67,22 @@ def add_book():
             try:
                 scr.clean()
                 book['stock'] = int(input("Write the current book's stock: "))
+                if book['stock'] > 0:
+                    book['state'] = 'available'
+                else:
+                    book['state'] = 'unavailable'
                 break
             except ValueError:
                 print("Write a correct value for the book's stock")
-                scr.pause()            
+                scr.pause()
+        books_data.update(book)
+        file.update_json('books.json', books_data)
+
+        while True:
+            scr.clean()
+            yes_or_not = input('Do you want to add other book? Y(yes) - N(not): ').upper()
+            if yes_or_not == 'Y':
+                break
+            elif yes_or_not == 'N':
+                isaddbook = False
+                break
